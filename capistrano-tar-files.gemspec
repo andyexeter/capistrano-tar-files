@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |spec|
   spec.name          = 'capistrano-tar-files'
-  spec.version       = '0.0.2'
+  spec.version       = '0.0.3'
   spec.authors       = ['Andy Palmer']
   spec.email         = ['andy@andypalmer.me']
   spec.description   = %q{Create/unpack tarball archives for directories that don't change often like vendor and node_modules}
