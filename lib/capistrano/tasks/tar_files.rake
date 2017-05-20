@@ -27,7 +27,7 @@ namespace :deploy do
                 if test "[ -f #{current_path.to_s}/#{path} || -d #{current_path.to_s}/#{path} ]"
                     execute :tar, fetch(:tar_create_flags), "#{deploy_to}/#{fetch(:tar_location)}/#{path.gsub("/", "_")}.tar", "-C #{current_path.to_s}/#{path} ."
                 else
-                    warn "#{path} does not exist. Skipping creating archive."
+                    warn "#{current_path.to_s}/#{path} does not exist. Skipping creating archive."
                 end
             end
         end
