@@ -40,6 +40,12 @@ set :tar_unpack_flags, "xf"              # default
 set :tar_create_flags, "cf"              # default
 ```
 
+## Example
+```ruby
+# Create and unpack tarballs for these directories between releases
+set :tar_files, ['vendor', 'node_modules', 'web/assets']
+```
+
 ## Prior Art
 
 This extension was inspired by [capistrano-copy-files](https://github.com/capistrano/copy-files)
