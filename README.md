@@ -2,7 +2,7 @@ capistrano-tar-files
 =====================
 
 Capistrano v3.* extension to speed up deployments by creating and unpacking tarball archives
-for directories which don't change much between releases e.g `vendor` and `node_modules`
+for directories which don't change much between releases e.g `vendor` (Composer) and `node_modules` (npm/yarn)
 
 ## Installation
 
@@ -19,7 +19,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install capistrano-copy-files
+    $ gem install capistrano-tar-files
 
 ## Usage
 
