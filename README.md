@@ -39,3 +39,11 @@ set :tar_location, "tarballs"            # default
 set :tar_unpack_flags, "xf"              # default
 set :tar_create_flags, "cf"              # default
 ```
+
+## Prior Art
+
+This extension was inspired by [capistrano-copy-files](https://github.com/capistrano/copy-files)
+
+## License
+
+Released under the [MIT license](LICENSE)
