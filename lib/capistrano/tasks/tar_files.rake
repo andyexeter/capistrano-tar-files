@@ -24,10 +24,10 @@ namespace :deploy do
         on roles :app do
             execute :mkdir, "-p", "#{deploy_to}/#{fetch(:tar_location)}"
             fetch(:tar_files).each do |path|
-                if test "[ -f #{current_path.to_s}/#{path} ]"
+                if test "[ -f #{current_path.to_s}/#{path} || -d #{current_path.to_s}/#{path} ]"
                     execute :tar, fetch(:tar_create_flags), "#{deploy_to}/#{fetch(:tar_location)}/#{path.gsub("/", "_")}.tar", "-C #{current_path.to_s}/#{path} ."
                 else
-                    warn "#{path} does not existing. Skipping creating archive."
+                    warn "#{path} does not exist. Skipping creating archive."
                 end
             end
         end
