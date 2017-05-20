@@ -29,7 +29,7 @@ Require in `Capfile` to use the default task:
 require 'capistrano/tar_files'
 ```
 
-The task will run during `deploy:updating` as part of Capistrano's default deploy
+Tarballs are unpacked during `deploy:updating` and created during `deploy:finishing` as part of Capistrano's default deploy
 
 Configurable options:
 
