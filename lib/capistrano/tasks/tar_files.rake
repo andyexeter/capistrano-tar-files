@@ -36,7 +36,7 @@ namespace :deploy do
     task :updating do
         invoke "deploy:unpack_archives"
     end
-    task :updated do
+    before :publishing do
         invoke "deploy:create_archives"
     end
 end
